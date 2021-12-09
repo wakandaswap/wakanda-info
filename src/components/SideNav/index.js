@@ -163,17 +163,17 @@ function SideNav({ history }) {
           </AutoColumn>
           <AutoColumn gap="0.5rem" style={{ marginLeft: '.75rem', marginBottom: '4rem' }}>
             <HeaderText>
-              <Link href="https://pancakeswap.finance/" target="_blank">
-                PancakeSwap
+              <Link href="https://wakandaswap.finance/" target="_blank">
+                Wakandaswap
               </Link>
             </HeaderText>
             <HeaderText>
-              <Link href="https://docs.pancakeswap.finance/" target="_blank">
+              <Link href="https://docs.wakandaswap.finance/" target="_blank">
                 Docs
               </Link>
             </HeaderText>
             <HeaderText>
-              <Link href="https://twitter.com/PancakeSwap " target="_blank">
+              <Link href="https://twitter.com/wakandainu " target="_blank">
                 Twitter
               </Link>
             </HeaderText>
