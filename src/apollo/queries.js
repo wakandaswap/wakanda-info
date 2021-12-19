@@ -3,7 +3,7 @@ import { FACTORY_ADDRESS, BUNDLE_ID } from '../constants'
 
 export const SUBGRAPH_HEALTH = gql`
   query health {
-    indexingStatusForCurrentVersion(subgraphName: "wakandaswap/exchange") {
+    indexingStatusForCurrentVersion(subgraphName: "wakandaswap/exchange-v2") {
       synced
       health
       chains {
@@ -523,7 +523,7 @@ const PairFields = `
 
 export const PAIRS_CURRENT = gql`
   query pairs {
-    pairs(first: 100, where: { createdAtBlockNumber_gte : 5753123 },  orderBy: trackedReserveETH, orderDirection: desc) {
+    pairs(first: 100, where: { createdAtBlockNumber_gte: 5753123 }, orderBy: trackedReserveETH, orderDirection: desc) {
       id
     }
   }
