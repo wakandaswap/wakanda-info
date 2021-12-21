@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { createChart, CrosshairMode } from 'lightweight-charts'
 import dayjs from 'dayjs'
-import { formattedNum } from '../../utils'
+import { formattedNum, getUtcCurrentTime } from '../../utils'
 import { usePrevious } from 'react-use'
 import styled from 'styled-components'
 import { Play } from 'react-feather'
@@ -49,7 +49,7 @@ const CandleStickChart = ({
 
   if (formattedData && formattedData.length > 0) {
     formattedData.push({
-      time: dayjs.unix(1616025600).unix(),
+      time: getUtcCurrentTime().unix(),
       open: parseFloat(formattedData[formattedData.length - 1].close),
       close: parseFloat(base),
       low: Math.min(parseFloat(base), parseFloat(formattedData[formattedData.length - 1].close)),
